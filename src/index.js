@@ -60,6 +60,30 @@ Add as many conditonals as you want.
 
 const calculationTest = () => {
   /*
+// ─────────────────────────────────────────────
+// 4) Prompt user for age and alert a response
+// ─────────────────────────────────────────────
+const checkAge = () => {
+  let userAge = prompt("How old are you?");
+  userAge = Number(userAge); // convert string → number
+
+  if (userAge < 10) {
+    alert(`${userAge}? You still have so much life ahead of you!`);
+  } else if (userAge < 18) {
+    alert(`${userAge}! Enjoy being a teenager while it lasts!`);
+  } else if (userAge < 25) {
+    alert(`${userAge}! Younger than Zlatan in his prime!`);
+  } else if (userAge < 40) {
+    alert(`Wow, you are ${userAge}! That's young!`);
+  } else if (userAge < 60) {
+    alert(`${userAge}! Age is just a number — you're in your prime!`);
+  } else {
+    alert(`${userAge}! Wisdom level: legendary!`);
+  }
+};
+
+checkAge();
+  
   5)
   In this function we want to give the user a mathematical calculation to 
   give us the answer to. Something like prompt('What is 5 + 6?')  
@@ -68,7 +92,24 @@ const calculationTest = () => {
   You choose if to use addition, subtraction, multiplication or division. 
   */
 };
+// ─────────────────────────────────────────────
+// 5) Math quiz — fixed question
+// ─────────────────────────────────────────────
+const calculationTest = () => {
+  const num1 = 5;
+  const num2 = 6;
+  const correctAnswer = num1 + num2;
 
+  const userAnswer = Number(prompt(`What is ${num1} + ${num2}?`));
+
+  if (userAnswer === correctAnswer) {
+    alert("Yay! Correct! 🎉");
+  } else {
+    alert(`Noooo, the answer is ${correctAnswer}. Better luck next time!`);
+  }
+};
+
+calculationTest();
 /*
 6) **BONUS**
 Make the calculation machine we just made show random calculations everytime you invoke the function.
