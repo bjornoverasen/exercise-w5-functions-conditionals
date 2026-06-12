@@ -29,6 +29,23 @@ theCoders("Jennie");
   or if the names ar the same length "The driver and the navigator has equally long names"
   */
 
+// ─────────────────────────────────────────────
+// 3) Compare name lengths
+// ─────────────────────────────────────────────
+const compareName = (driver, navigator) => {
+  if (driver.length > navigator.length) {
+    console.log("The driver has the longest name.");
+  } else if (navigator.length > driver.length) {
+    console.log("The navigator has the longest name.");
+  } else {
+    console.log("The driver and the navigator has equally long names.");
+  }
+};
+
+compareName("Jennie", "Alfons"); // both 6 chars → equally long
+compareName("Jennie", "Tom");    // driver longer
+compareName("Bo", "Alfons");     // navigator longer
+
 
 /*
 4) 
